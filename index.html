@@ -1,1 +1,63 @@
-<!doctype html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Keynote</title><meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,width=device-width"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/></head><body id="body" bgcolor="black"><div id="stageArea"><div id="stage" class="stage"></div><div id="hyperlinkPlane" class="stage"></div></div><div id="slideshowNavigator"></div><div id="slideNumberControl"></div><div id="slideNumberDisplay"></div><div id="helpPlacard"></div><div id="waitingIndicator"><div id="waitingSpinner"></div></div><script src="assets/player/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+    <title>Keynote</title>
+    <style>
+        body {
+            background-color: #121212; /* Dark gray instead of pure black */
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+        #waitingIndicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #waitingSpinner {
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            border-top: 6px solid white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body id="body">
+
+    <div id="stageArea">
+        <div id="stage" class="stage"></div>
+        <div id="hyperlinkPlane" class="stage"></div>
+    </div>
+
+    <div id="slideshowNavigator"></div>
+    <div id="slideNumberControl"></div>
+    <div id="slideNumberDisplay"></div>
+    <div id="helpPlacard"></div>
+
+    <!-- Loading Indicator -->
+    <div id="waitingIndicator">
+        <div id="waitingSpinner"></div>
+    </div>
+
+    <!-- Fallback message if JavaScript is disabled -->
+    <noscript>
+        <p style="color:white; text-align:center; font-size:18px;">
+            JavaScript is required to view this page. Please enable JavaScript in your browser.
+        </p>
+    </noscript>
+
+    <!-- JavaScript File (Ensure it's properly uploaded in your GitHub repo) -->
+    <script src="assets/player/main.js"></script>
+
+</body>
+</html>
